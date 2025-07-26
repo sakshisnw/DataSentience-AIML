@@ -10,7 +10,7 @@ An advanced **deep learning-based detection model** built using **YOLOv11**, des
 - **YOLOv11** (Object Detection)  
 - **OpenCV** (Image Processing)  
 - **PyTorch** (Deep Learning Framework)  
-- **Jupyter Notebook / Colab** (Dev & Testing)
+- **Jupyter Notebook** (Dev & Testing)
 
 ---
 
