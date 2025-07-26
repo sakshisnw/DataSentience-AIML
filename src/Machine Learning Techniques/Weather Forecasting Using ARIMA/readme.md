@@ -7,7 +7,7 @@ To forecast future temperature values using historical weather data with an ARIM
 ---
 
 ## 📊 Dataset Used
-We use a publicly available weather dataset (such as from Kaggle, NOAA, or OpenWeather). The dataset typically contains:
+We use a publicly available [weather dataset on Kaggle by sumanthvrao](https://www.kaggle.com/datasets/sumanthvrao/daily-climate-time-series-data). The dataset typically contains:
 - Date/Time
 - Temperature (Celsius/Fahrenheit)
 - Humidity
