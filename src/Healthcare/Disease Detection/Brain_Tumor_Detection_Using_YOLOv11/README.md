@@ -5,21 +5,11 @@ An advanced **deep learning-based detection model** built using **YOLOv11**, des
 
 ---
 
-## 📌 Features  
-✔️ **Real-Time Object Detection:** Detects tumor regions directly in MRI images using YOLOv13.  
-✔️ **High Accuracy & Speed:** Leverages cutting-edge YOLOv13 architecture for fast medical diagnostics.  
-✔️ **Annotated Outputs:** Visualizes bounding boxes around tumor regions.  
-✔️ **Modular Codebase:** Easy to adapt, expand, or retrain with custom datasets.  
-✔️ **Clean Visuals:** Output images with detections for review or reporting.  
-
----
-
 ## 🛠️ Technologies Used  
 - **Python**
 - **YOLOv11** (Object Detection)  
 - **OpenCV** (Image Processing)  
 - **PyTorch** (Deep Learning Framework)  
-- **Matplotlib** (Visualization)  
 - **Jupyter Notebook / Colab** (Dev & Testing)
 
 ---
