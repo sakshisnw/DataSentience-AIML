@@ -59,6 +59,9 @@ For this version, we focus on **daily average temperature**.
 - Predict future values (n-steps ahead)
 - Plot observed vs predicted values
 - Evaluate using **Root Mean Square Error (RMSE)**
+- The temperature for the past weeks over Delhi was extracted from [The Free Weather API on WeatherAPI.com](https://www.weatherapi.com/)
+- If you want to run the predictions for the past weeks, make sure to create an account at the Waether API Website
+  and insert your API Key in the placeholder `API_KEY`
 
 ### 5. Streamlit Interface
 - Sidebar for parameter input
