@@ -35,7 +35,7 @@ jupyter notebook yolov11_model.ipynb
 
 ## Dataset Used
 The model can be trained/tested on publicly available MRI brain tumor dataset: 
-![Brain_Tumor_Dataset](https://www.kaggle.com/datasets/reeteesharoy/braintumor-dataset)
+![Brain_Tumor_Dataset](https://universe.roboflow.com/fast-dzyt9/tumor_detection-gbckh/dataset/1)
 
 ---
 ## ✨ Contributing
