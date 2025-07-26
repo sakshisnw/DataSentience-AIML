@@ -3,7 +3,7 @@ from yolo_code import load_model, train_model  # Import functions from yolo_code
 
 
 # Load the trained YOLO model
-model_path = "C:/yolo11/runs/detect/train2/weights/best.pt"  # Update this path
+model_path = "yolo11/runs/detect/train2/weights/best.pt"  # Update this path according to your system
 model = yolo(model_path)
 
 # Streamlit UI
