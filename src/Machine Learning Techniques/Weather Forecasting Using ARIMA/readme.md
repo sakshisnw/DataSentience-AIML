@@ -1,5 +1,5 @@
 ## 🔍 Project Overview
-This project focuses on time-series forecasting of weather data (specifically temperature) using the ARIMA (AutoRegressive Integrated Moving Average) model. With a strong emphasis on both backend modeling and frontend usability, this app leverages the Streamlit framework to offer a sleek, interactive interface for real-time weather forecasting.
+This project focuses on time-series forecasting of weather data (specifically temperature) using the ARIMA (AutoRegressive Integrated Moving Average) model. With a strong emphasis on backend modeling and frontend usability, this app leverages the Streamlit framework to offer a sleek, interactive interface for real-time weather forecasting.
 
 ## 📈 Objective
 To forecast future temperature values using historical weather data with an ARIMA model, and provide an easy-to-use web interface for visualization and interaction.
@@ -16,7 +16,7 @@ We use a publicly available [weather dataset on Kaggle by sumanthvrao](https://w
 For this version, we focus on **daily average temperature**.
 
 ### Sample Columns:
-| Date       | Temperature (C) |
+| Date       | Temperature (°C) |
 |------------|------------------|
 | 2020-01-01 | 23.5             |
 | 2020-01-02 | 24.1             |
@@ -29,8 +29,7 @@ For this version, we focus on **daily average temperature**.
 - **Numpy**: Numerical operations
 - **Matplotlib & Seaborn**: Visualizations
 - **Scikit-learn**: Evaluation metrics (RMSE)
-- **Statsmodels**: ARIMA implementation
-- **Pmdarima**: Auto-ARIMA tuning
+- **Statsmodels**: SARIMAX implementation, ACF and PACF plotter, and Augmented Dickey Fuller Test(to check stationarity).
 - **Streamlit**: Interactive web UI
 
 ---
@@ -42,15 +41,18 @@ For this version, we focus on **daily average temperature**.
 - Convert date to datetime format
 - Handle missing values (e.g., imputation or interpolation)
 - Resample to daily average temperature if needed
+- Since the Data was daily, SARIMAX took a long time to fit it
+  So instead, we averaged the temperature over a week to shorten the dataset
+  and also to reduce the fitting time for SARIMAX.
 
 ### 2. Exploratory Data Analysis (EDA)
 - Line plot of temperature over time
 - Decomposition of time series (trend, seasonality)
-- ACF and PACF plots to analyze lags to make Time Series stationary.
+- ACF and PACF plots to analyze lags to make the Time Series stationary.
 
 ### 3. Model Building
-- Use `pmdarima.auto_arima()` to automatically determine best (p,d,q) parameters
-- Fit ARIMA model using `statsmodels.tsa.arima.model.ARIMA`
+- Use `statsmodels.tsa.statespace.sarimax.SARIMAX`
+- Use PACF, ACF Plots to decide values for p,d,q, and P, D, Q(Seasonal)
 - Train-test split (e.g., last 30 days as test set)
 
 ### 4. Forecasting
