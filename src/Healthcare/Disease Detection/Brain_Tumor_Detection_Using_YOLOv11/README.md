@@ -28,7 +28,7 @@ An advanced **deep learning-based detection model** built using **YOLOv11**, des
 ### 1️⃣ Clone the Repository  
 ```bash
 git clone https://github.com/your-username/DataSentience-AIML.git
-cd DataSentience-AIML/brain-tumor-yolov13
+cd DataSentience-AIML/Brain_Tumor_Detection_Using_YOLOv11
 ```
 ### 2️⃣ Install Dependencies
 Install all required packages using pip:
