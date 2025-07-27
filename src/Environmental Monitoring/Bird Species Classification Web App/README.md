@@ -1,12 +1,29 @@
-## PROJECT TITLE : BIRDS SPECIES CLASSIFICATION
+## PROJECT TITLE : BIRD SPECIES CLASSIFICATION
 
 #### AIM
 
-To classify the different species of bird
+To classify different species of birds using deep learning and computer vision.
 
 #### DESCRIPTION
 
-This is a classification problem where we need to classify the different species of birds. We use Xception Transfer Learning Model.
+This is a classification problem where we classify different species of birds using a Xception Transfer Learning Model. The application provides a user-friendly Streamlit interface for real-time bird species prediction.
+
+**✨ Recent Updates:**
+- ✅ Fixed deprecated Streamlit cache functions for better performance
+- ✅ Updated to modern Streamlit `@st.cache_resource` 
+- ✅ Enhanced UI with improved user experience
+- ✅ Added confidence visualization and top-3 predictions
+- ✅ Fixed deprecated PIL Image.ANTIALIAS usage
+- ✅ Added proper error handling and documentation
+
+#### FEATURES
+
+- 🦅 **400+ Bird Species Classification**
+- 📱 **Mobile-Responsive Interface** 
+- 🎯 **Real-time Predictions** with confidence scores
+- 📊 **Top-3 Predictions Display**
+- ⚡ **Optimized Performance** with modern caching
+- 🖼️ **Image Preview** before prediction
 
 #### LINK TO WEBAPP:
 
