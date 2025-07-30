@@ -1,7 +1,7 @@
 📊 Candidate Scoring System (Regression)
 
 This project uses machine learning to predict a candidate’s **Total Interview Score** based on their communication ability, thinking skills, and interview mode/experience. It is part of a larger analytics system that automates talent assessment based on structured HR data.
-
+[!ui ss](assets/image.png)
 ---
 
 ## 🧠 Problem Statement
