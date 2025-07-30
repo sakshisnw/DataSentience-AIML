@@ -2,6 +2,7 @@
 
 This project is a machine learning-based system that predicts the outcome of a candidate's interview using structured interview evaluation data. It helps recruiters and HR departments estimate whether a candidate will pass or fail the interview based on profile data and communication scores.
 
+[!ui ss](assets/image.png)
 ---
 
 ## 📊 Dataset
