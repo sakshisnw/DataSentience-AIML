@@ -27,7 +27,7 @@ def get_response_from_gemini(user_message, model):
     
     Respond in a honest, no fluff manner. Also, do check all posibilites before concluding.
     """
-    
+    return prompt
     try:
         response = model.generate_content(prompt)
         # Clean the response to remove any HTML or unwanted formatting
