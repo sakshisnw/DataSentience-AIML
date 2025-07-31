@@ -1,5 +1,5 @@
 import streamlit as st
-from chatbot_utils import translate_to_english, translate_from_english, get_response_from_gemini
+from chatbot_utils import translate_to_english, translate_from_english,get_response_from_gemini
 from config import configure_gemini 
 
 LANGUAGES = {
