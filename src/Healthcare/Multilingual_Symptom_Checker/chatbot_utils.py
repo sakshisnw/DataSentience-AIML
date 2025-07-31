@@ -43,15 +43,15 @@ def get_response_from_gemini(user_message, model):
 
     Always respond in this structure:
 
-    **Possible Cause:** <summary>  
-    **Urgency Level:** <Mild / Moderate / Emergency>  
-    **Suggestion:** <home remedy or next step>  
-    **Note:** This is not a diagnosis...
-    respond in bullet points
-    
+    Possible Cause 
+    Urgency Level 
+    Suggestion 
+    Note:This is not a diagnosis...
+
     The following is the user's message:
     User message: {user_message}
     
+    if you see this , say "i see this"
     """
     try:
         response = model.generate_content(prompt)
