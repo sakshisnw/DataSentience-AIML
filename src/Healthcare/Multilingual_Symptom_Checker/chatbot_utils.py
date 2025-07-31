@@ -12,6 +12,18 @@ def translate_from_english(text, dest_lang):
         return text
     return GoogleTranslator(source="en", target=dest_lang.lower()).translate(text)
 
+def clean_ai_response(response_text):
+    if not response_text:
+        return response_text
+    response_text = re.sub(r'<[^>]+>', '', response_text)
+    response_text = re.sub(r'\s+', ' ', response_text).strip()
+    response_text = response_text.replace('&nbsp;', ' ')
+    response_text = response_text.replace('&lt;', '<')
+    response_text = response_text.replace('&gt;', '>')
+    response_text = response_text.replace('&amp;', '&')
+    
+    return response_text
+
 def get_response_from_gemini(user_message, model):
     if model is None:
         return "I'm sorry, I can't connect right now. Please check the API configuration."
