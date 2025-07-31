@@ -16,7 +16,7 @@ st.set_page_config(page_title="Multilingual Symptom Checker", page_icon=":hospit
 st.title("Multilingual Symptom Checker :hospital:")
 
 selected_lang = st.selectbox("Select Language", list(LANGUAGES.keys()))
-user_imput = st.text_area("Describe your symptoms: " , height=150)
+user_input = st.text_area("Describe your symptoms: " , height=150)
 
 if st.button("Check Symptoms"):
     if user_input.strip():
