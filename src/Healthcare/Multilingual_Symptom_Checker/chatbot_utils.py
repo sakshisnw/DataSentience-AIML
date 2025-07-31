@@ -1,18 +1,16 @@
-from googletrans import Translator
+from deep_translator import GoogleTranslator
 import openai
 import streamlit as st
-
-translator = Translator()
 
 def translate_to_english(text , src_lang):
     if src_lang.lower()=="english":
         return text
-    return translator.translate(text, src=src_lang.lower(), dest= "en").text
+    return GoogleTranslator(source=src_lang.lower(), target="en").translate(text)
 
 def translate_from_english(text, dest_lang):
     if dest_lang.lower()=="english":
         return text
-    return translator.translate(text, src="en", dest=dest_lang.lower()).text
+    return GoogleTranslator(source="en", target=dest_lang.lower()).translate(text)
 
 def get_response_from_openai(prompt):
     openai.api_key = st.secrets["OPENAI_API_KEY"]
