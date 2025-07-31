@@ -25,6 +25,7 @@ def get_response_from_gemini(user_message, model):
     """
     try:
         response = model.generate_content(prompt)
+        return response.text
         # Clean the response to remove any HTML or unwanted formatting
         cleaned_response = clean_ai_response(response.text)
         return cleaned_response
