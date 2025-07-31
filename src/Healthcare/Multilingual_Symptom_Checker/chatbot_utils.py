@@ -2,8 +2,6 @@ from deep_translator import GoogleTranslator
 import google.generativeai as genai
 import streamlit as st
 
-genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-
 def translate_to_english(text , src_lang):
     if src_lang.lower()=="english":
         return text
