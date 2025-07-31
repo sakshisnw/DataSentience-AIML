@@ -49,6 +49,7 @@ def get_response_from_gemini(user_message, model):
     **Note:** This is not a diagnosis...
     respond in bullet points
     
+    The following is the user's message:
     User message: {user_message}
     
     """
