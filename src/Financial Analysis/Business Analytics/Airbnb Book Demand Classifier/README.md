@@ -2,6 +2,7 @@
 
 Predict whether an Airbnb listing in New York City is likely to be frequently booked based on features like location, pricing, room type, and review activity.
 
+[!ui screenshot](assets/image.png)
 ---
 
 ## 📌 Project Overview
