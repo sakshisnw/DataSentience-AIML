@@ -34,7 +34,7 @@ def get_response_from_gemini(user_message, model):
     
     User message: {user_message}
     
-    Respond in a honest, no fluff manner. Also, do check all posibilites before concluding.
+    Respond in a honest, no fluff manner. Also, do check all posibilites before concluding. Reply concisely and clearly, in a human-like conversational tone. Avoid long paragraphs.
     """
     try:
         response = model.generate_content(prompt)
