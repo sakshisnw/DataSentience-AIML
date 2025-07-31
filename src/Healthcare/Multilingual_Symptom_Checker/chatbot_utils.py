@@ -1,6 +1,7 @@
 from deep_translator import GoogleTranslator
 import google.generativeai as genai
 import streamlit as st
+import re
 
 def translate_to_english(text , src_lang):
     if src_lang.lower()=="english":
