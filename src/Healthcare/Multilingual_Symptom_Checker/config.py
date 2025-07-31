@@ -1,3 +1,6 @@
+import streamlit as st
+import google.generativeai as genai
+
 def configure_gemini():
     try:
         api_key = st.secrets["GEMINI_API_KEY"]
