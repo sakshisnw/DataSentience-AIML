@@ -30,5 +30,6 @@ def get_response_from_gemini(user_message, model):
         cleaned_response = clean_ai_response(response.text)
         return cleaned_response
     except Exception as e:
+        st.error(f"Error occurred: {e}")
         return "Trouble connecting. Please try again later."
 
