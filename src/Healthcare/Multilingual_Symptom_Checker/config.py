@@ -1,0 +1,11 @@
+def configure_gemini():
+    try:
+        api_key = st.secrets["GEMINI_API_KEY"]
+        genai.configure(api_key="GEMINI_API_KEY")
+        model = genai.GenerativeModel('gemini-2.0-flash')
+        return model
+    except KeyError:
+        st.error("Gemini API key not found in Streamlit secrets.")
+    except Exception as e:
+        st.error(f"Failed to configure Gemini API: {e}")
+    return None

@@ -1,5 +1,6 @@
 import streamlit as st
-from chatbot_utils import translate_to_english, translate_from_english, get_response_from_openai
+from chatbot_utils import translate_to_english, translate_from_english, get_response_from_gemini
+from config import configure_gemini 
 
 LANGUAGES = {
     "English": "en",
@@ -12,6 +13,8 @@ LANGUAGES = {
     "Punjabi": "pa",
 }
 
+model = configure_gemini() 
+
 st.set_page_config(page_title="Multilingual Symptom Checker", page_icon=":hospital:", layout="wide")
 st.title("Multilingual Symptom Checker :hospital:")
 
@@ -21,7 +24,7 @@ user_input = st.text_area("Describe your symptoms: " , height=150)
 if st.button("Check Symptoms"):
     if user_input.strip():
         translated_input = translate_to_english(user_input, LANGUAGES[selected_lang])
-        llm_response = get_response_from_openai(translated_input)
+        llm_response = get_response_from_gemini(translated_input, model)
         translated_output = translate_from_english(llm_response, LANGUAGES[selected_lang])
 
         st.markdown("### 💬 Diagnostic Suggestion")

@@ -11,7 +11,7 @@ An AI-powered chatbot that allows users to input health-related symptoms in **mu
 
 Many existing medical tools assume English fluency, excluding large rural and non-English speaking populations. This project bridges that accessibility gap using:
 
-- 🧠 Generative AI (OpenAI / Gemini)
+- 🧠 Generative AI (Gemini)
 - 🌐 Translation APIs (Google Translate)
 - 💻 Streamlit UI
 - ❤️ Practical, inclusive AI for good
@@ -31,12 +31,13 @@ Many existing medical tools assume English fluency, excluding large rural and no
 ## 📂 Directory Structure
 
 src/
-└── Healthcare/
-    └── Multilingual_Symptom_Checker/
-        ├── app.py
-        ├── chatbot_utils.py
-        ├── requirements.txt
-        └── README.md
+Healthcare/
+Multilingual_Symptom_Checker/
+app.py
+chatbot_utils.py
+config.py
+requirements.txt
+README.md
 
 ## 🛠️ Tech Stack
 
@@ -44,6 +45,6 @@ src/
 |--------------|----------------------------------|
 | Python       | Core language                    |
 | Streamlit    | Frontend for chatbot             |
-| OpenAI API   | LLM-based response generation    |
+| GEMINI API   | LLM-based response generation    |
 | Googletrans  | Translation between languages    |
-| dotenv       | API key management               |
+

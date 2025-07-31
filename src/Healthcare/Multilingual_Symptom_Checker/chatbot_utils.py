@@ -1,6 +1,8 @@
 from deep_translator import GoogleTranslator
-import openai
+import google.generativeai as genai
 import streamlit as st
+
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 def translate_to_english(text , src_lang):
     if src_lang.lower()=="english":
@@ -12,12 +14,23 @@ def translate_from_english(text, dest_lang):
         return text
     return GoogleTranslator(source="en", target=dest_lang.lower()).translate(text)
 
-def get_response_from_openai(prompt):
-    openai.api_key = st.secrets["OPENAI_API_KEY"]
-    response = openai.ChatCompletion.create(
-        model = "gpt-3.5-turbo",
-        messages = [{"role": "system", "content": "You are a helpful healthcare assistant. Based on the symptoms, suggest possible illness in a practical yet not scary way. Also, mention the urgency level (mild , moderate, severe). If the symptoms are not related to any illness, suggest that the user consult a doctor for further evaluation."},
-        {"role": "user", "content": prompt}],
-        temperature = 0.7,
-    )
-    return response.choices[0].message['content']
+def get_response_from_gemini(user_message, model):
+    if model is None:
+        return "I'm sorry, I can't connect right now. Please check the API configuration."
+
+    prompt = f"""
+    You are a helpful healthcare assistant. Based on the symptoms, suggest possible illness in a practical yet not scary way. Also, mention the urgency level (mild , moderate, severe). If the symptoms are not related to any illness, suggest that the user consult a doctor for further evaluation.
+    
+    User message: {user_message}
+    
+    Respond in a honest, no fluff manner. Also, do check all posibilites before concluding.
+    """
+    
+    try:
+        response = model.generate_content(prompt)
+        # Clean the response to remove any HTML or unwanted formatting
+        cleaned_response = clean_ai_response(response.text)
+        return cleaned_response
+    except Exception as e:
+        return "Trouble connecting. Please try again later."
+
