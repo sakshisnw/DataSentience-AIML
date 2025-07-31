@@ -47,9 +47,10 @@ def get_response_from_gemini(user_message, model):
     **Urgency Level:** <Mild / Moderate / Emergency>  
     **Suggestion:** <home remedy or next step>  
     **Note:** This is not a diagnosis...
-
+    respond in bullet points
     
     User message: {user_message}
+    
     """
     try:
         response = model.generate_content(prompt)

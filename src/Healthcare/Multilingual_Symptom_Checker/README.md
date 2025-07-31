@@ -3,7 +3,7 @@
 An AI-powered chatbot that allows users to input health-related symptoms in **multiple Indian languages** (English, Hindi, Bengali, Tamil), and get basic diagnostic suggestions with urgency classification (mild/moderate/emergency).
 
 ### 🚀 Live Demo
-
+[Link](https://datasentience-aiml-kkbvst7cdlkyvpeju6tpgl.streamlit.app/)
 
 ---
 
