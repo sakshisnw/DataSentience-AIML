@@ -1,7 +1,7 @@
 🏠 Optimal Pricing Recommendation System
 
 A machine learning model that recommends optimal listing prices for Airbnb NYC rentals based on features like location, room type, availability, and reviews.
-
+[!ui screenshot](assets/image.png)
 ---
 
 ## 📌 Objective
