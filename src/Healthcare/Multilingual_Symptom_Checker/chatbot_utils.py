@@ -19,13 +19,12 @@ def get_response_from_gemini(user_message, model):
         return "I'm sorry, I can't connect right now. Please check the API configuration."
 
     prompt = f"""
-    You are a helpful healthcare assistant. Based on the symptoms, suggest possible illness in a practical yet not scary way. Also, mention the urgency level (mild , moderate, severe). If the symptoms are not related to any illness, suggest that the user consult a doctor for further evaluation.
+    You are a helpful healthcare assistant. Based on the symptoms, suggest possible illness in a practical yet non scary way. Also, mention the urgency level (mild , moderate, severe). If the symptoms are not related to any illness, suggest that the user consult a doctor for further evaluation.
     
     User message: {user_message}
     
     Respond in a honest, no fluff manner. Also, do check all posibilites before concluding.
     """
-    return prompt
     try:
         response = model.generate_content(prompt)
         # Clean the response to remove any HTML or unwanted formatting
