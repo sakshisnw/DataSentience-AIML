@@ -1,18 +1,56 @@
-# DUPLICATE QUESTION PAIR 
-A NLP project to find weather given 2 questions are same are not semantically speaking.
+# 🔍 Duplicate Question Pair Detection
 
-Dataset Link - https://www.kaggle.com/c/quora-question-pairs
+An advanced NLP project showcasing the evolution from basic ML to production-ready web applications for semantic question similarity detection.
 
-In This Project we Have 3 Jupyter Notebook , In First i have simple Random Forest Algorithm which gives me an accuracy of 75% , In second Jupyter Notebook I have tried 
-to increase the accuracy by adding 7 new Feature , such as Length of each question , no of character in the Question , Common word , no of Character in one word . 
-and have used Random forest from this I got accuracy of 80% and in Last Jupyter Notebook NLP concept is used which gives an accuracy of 90%
+## 📊 Dataset
+**Source**: [Kaggle Quora Question Pairs](https://www.kaggle.com/c/quora-question-pairs) (400K+ question pairs)
 
-Built a StreamLit application to demonstrate the project . In this Application there are 2 rows that is for entering Question 1 and Question 2 , then click on predict to konow wheather it is same or duplicate . 
+## 🚀 Project Components
 
-So For Running The Project Run Python Notebook first , data set Train.csv is already provided and then install the following dependency provided in Requirement Section to run The application and get the desired Result .
+### 📓 Research Notebooks
+Progressive ML development through multiple approaches:
 
-As The data set is Too Long about 400005 so Be paitent while running python notebook .
+1. **`only-bow.ipynb`**: Basic Bag of Words + Random Forest (75% accuracy)
+2. **`bow-with-basic-features.ipynb`**: Enhanced with 7 additional features (80% accuracy)
+3. **`bow-with-preprocessing-and-advanced-features.ipynb`**: Advanced NLP preprocessing (90% accuracy)
+4. **`initial_EDA.ipynb`**: Exploratory data analysis
 
-For Running The application on Your Local Host Run : StreamLit run app.py .
-Furture You can deploy it to heroku , it is simple to do you will get the commands on heroku when you go there to deploy , Simply run that command your project will be deployed .
+### 🌐 Production Web Application
+**[Advanced Streamlit App](./streamlit-app/)**: Professional duplicate detection platform
+
+#### Key Features:
+- Multi-algorithm similarity detection (TF-IDF + Fuzzy matching)
+- Interactive dashboard with real-time analysis
+- Customizable similarity thresholds  
+- Batch processing capabilities
+- Advanced visualizations (radar charts, confidence gauges)
+- Mobile-responsive design
+
+#### Quick Start:
+```bash
+cd streamlit-app
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+**📖 [Full Documentation & Features →](./streamlit-app/README.md)**
+
+## 📈 Performance Evolution
+
+| Stage | Approach | Accuracy | Implementation |
+|-------|----------|----------|----------------|
+| 1 | Basic BoW | 75% | Random Forest |
+| 2 | Enhanced Features | 80% | + 7 custom features |
+| 3 | Advanced NLP | 90% | Full preprocessing |
+| 4 | **Production App** | **Real-time** | **Multi-algorithm fusion** |
+
+## 🎯 Learning Path
+
+1. **Start with notebooks** to understand ML progression
+2. **Test the web app** with your own question pairs
+3. **Deploy to production** using included configs
+
+---
+
+**🚀 Complete ML Pipeline**: From research notebooks to production-ready web application
 
